@@ -1,0 +1,12 @@
+{
+  "name": "fp-offer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Коммерческое предложение — лендинг деловой игры на Битрикс24",
+  "scripts": {
+    "generate-pdf": "node scripts/generate-pdf.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}
