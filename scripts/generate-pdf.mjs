@@ -18,6 +18,7 @@ const browser = await puppeteer.launch({
 const page = await browser.newPage();
 
 await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
+await page.emulateMediaType('print');
 
 await page.pdf({
   path: pdfPath,

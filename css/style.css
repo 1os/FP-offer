@@ -446,9 +446,17 @@ tr:last-child td {
 
 /* Print / PDF */
 @media print {
+  :root {
+    --bg: #fff;
+    --bg-card: #f5f7fa;
+    --text: #111;
+    --text-muted: #333;
+    --border: #ccc;
+  }
+
   body {
-    background: #fff;
-    color: #111;
+    background: #fff !important;
+    color: #111 !important;
   }
 
   body::before {
@@ -466,21 +474,94 @@ tr:last-child td {
     break-inside: avoid;
   }
 
+  .section__title,
+  .section__subtitle,
+  .hero__lead,
+  .card h3,
+  .card p,
+  .card li,
+  .timeline__item h4,
+  .timeline__item p,
+  .footer,
+  .price-block__note {
+    color: #111 !important;
+  }
+
+  .section__subtitle,
+  .card p,
+  .card li,
+  .stat__label,
+  .timeline__item p,
+  .price-block__note {
+    color: #333 !important;
+  }
+
+  .hero h1,
+  .hero h1 span,
+  .stat__value,
+  .price-block__amount {
+    -webkit-text-fill-color: #111 !important;
+    background: none !important;
+    color: #111 !important;
+  }
+
+  .hero__badge {
+    background: #e8edf5 !important;
+    color: #111 !important;
+    border-color: #ccc !important;
+  }
+
   .card,
   .price-block,
   .stat {
-    border: 1px solid #ddd;
-    background: #f9f9f9;
-    box-shadow: none;
+    border: 1px solid #ddd !important;
+    background: #f9f9f9 !important;
+    box-shadow: none !important;
   }
 
   .section--alt {
-    background: transparent;
-    border: none;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .table-wrap {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+  }
+
+  table {
+    background: #fff !important;
+  }
+
+  th {
+    background: #e8edf5 !important;
+    color: #111 !important;
+    border: 1px solid #ccc !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  td {
+    background: #fff !important;
+    color: #222 !important;
+    border: 1px solid #ddd !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  td strong,
+  th strong {
+    color: #000 !important;
   }
 
   a {
-    color: #111;
+    color: #111 !important;
+    text-decoration: underline;
+  }
+
+  .tag {
+    background: #e8edf5 !important;
+    color: #222 !important;
   }
 }
 
