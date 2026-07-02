@@ -1,11 +1,15 @@
 import puppeteer from 'puppeteer';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const htmlPath = path.join(root, 'index.html');
-const pdfPath = path.join(root, 'docs', 'commercial-proposal.pdf');
+const docsDir = path.join(root, 'docs');
+const pdfPath = path.join(docsDir, 'commercial-proposal.pdf');
+
+fs.mkdirSync(docsDir, { recursive: true });
 
 const browser = await puppeteer.launch({
   headless: true,
