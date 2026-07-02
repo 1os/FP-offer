@@ -7,7 +7,10 @@ const root = path.resolve(__dirname, '..');
 const htmlPath = path.join(root, 'index.html');
 const pdfPath = path.join(root, 'docs', 'commercial-proposal.pdf');
 
-const browser = await puppeteer.launch({ headless: true });
+const browser = await puppeteer.launch({
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
 const page = await browser.newPage();
 
 await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });

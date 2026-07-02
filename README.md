@@ -22,6 +22,10 @@ python3 -m http.server 8080
 
 ## Генерация PDF
 
+PDF пересобирается автоматически в GitHub Actions при каждом push в `main`.
+
+Для локальной пересборки:
+
 ```bash
 npm install
 npm run generate-pdf
