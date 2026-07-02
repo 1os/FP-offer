@@ -22,7 +22,7 @@ python3 -m http.server 8080
 
 ## Генерация PDF
 
-PDF пересобирается автоматически в GitHub Actions при каждом push в `main`.
+PDF пересобирается автоматически в GitHub Actions при каждом push в `main` и сохраняется в `docs/commercial-proposal.pdf` в репозитории.
 
 Для локальной пересборки:
 
